@@ -8,18 +8,30 @@ int size = massivenumber.Length;
 Console.WriteLine($"рамзмер массива {size}");
 int ferstindex = 0;
 int secondindex = size-1;
-
-if (massivenumber[ferstindex] == massivenumber[secondindex])
-{
-    // while (ferstindex < size/2)
-    //{
-    ferstindex = ferstindex +1;
-    secondindex = secondindex - 1;
+//while (ferstindex < size/2)
+    //{// 
+        if (massivenumber[ferstindex] == massivenumber[secondindex])
+        {
+           
+            ferstindex = ferstindex +1;
+            secondindex = secondindex - 1;
+            if (massivenumber[ferstindex] == massivenumber[secondindex])
+            {
+                Console.WriteLine($"Введеное число является палиндромом");
+            }
+            else
+            {
+                Console.WriteLine($"Введеное число не является палиндромом");
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Введеное число не является палиндромом");
+        
+            ferstindex = ferstindex +1;
+            secondindex = secondindex - 1;
+        }
+            
+            
     //}
-    Console.WriteLine($"Введеное число является палиндромом");
-}
-else
-{
-     Console.WriteLine($"Введеное число не является палиндромом");
-}
 
